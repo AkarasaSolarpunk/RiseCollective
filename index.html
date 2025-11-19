@@ -8,19 +8,19 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800;900&display=swap" rel="stylesheet">
     <style>
         /* =======================================================
-           1. PALET WARNA SOLARPUNK & PROTOKOL IHZAN
+           1. SOLARPUNK COLOR PALETTE & IHZAN PROTOCOL
            ======================================================= */
         :root {
-            --color-verdant: #30A865;       /* Hijau Regeneratif */
-            --color-azure: #00A0C6;         /* Biru Clarity/Kejelasan */
-            --color-shams: #FFD700;         /* Kuning Matahari/Energi */
-            --color-protocol: #333333;      /* Abu-abu Struktur */
-            --color-background: #F0F8F8;    /* Eco White/Latar Belakang Bersih */
+            --color-verdant: #30A865;       /* Regenerative Green */
+            --color-azure: #00A0C6;         /* Clarity Blue */
+            --color-shams: #FFD700;         /* Sun/Energy Yellow */
+            --color-protocol: #333333;      /* Structure Gray */
+            --color-background: #F0F8F8;    /* Eco White/Clean Background */
             --color-white-trans: rgba(255, 255, 255, 0.7);
         }
 
         /* =======================================================
-           2. GLOBAL STYLES & TIPOGRAFI
+           2. GLOBAL STYLES & TYPOGRAPHY
            ======================================================= */
         * {
             box-sizing: border-box;
@@ -53,7 +53,7 @@
         }
 
         /* =======================================================
-           3. HEADER & NAVIGASI (GLAZIAL/TRANSPARANSI)
+           3. HEADER & NAVIGATION (GLACIAL/TRANSPARENCY)
            ======================================================= */
         header {
             position: fixed;
@@ -63,7 +63,7 @@
             padding: 15px 0;
             z-index: 1000;
             background-color: var(--color-white-trans);
-            /* Efek Kaca Buram / Glazial Solarpunk */
+            /* Glacial/Solarpunk Frosted Glass Effect */
             backdrop-filter: blur(10px);
             box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
         }
@@ -95,7 +95,7 @@
 
         .nav-link a:hover {
             color: var(--color-azure);
-            text-shadow: 0 0 5px rgba(0, 160, 198, 0.5); /* Aksen Cahaya Aura */
+            text-shadow: 0 0 5px rgba(0, 160, 198, 0.5); /* Aura Light Accent */
         }
         
         .nav-link a::after {
@@ -116,14 +116,14 @@
 
 
         /* =======================================================
-           4. HERO SECTION (ENERGI & GRADIENT)
+           4. HERO SECTION (ENERGY & GRADIENT)
            ======================================================= */
         .hero {
             position: relative;
             padding-top: 150px;
             padding-bottom: 100px;
             text-align: center;
-            /* Gradien lembut Solarpunk */
+            /* Soft Solarpunk Gradient */
             background: linear-gradient(150deg, var(--color-background) 30%, rgba(48, 168, 101, 0.05) 100%);
             overflow: hidden;
         }
@@ -158,31 +158,36 @@
             text-decoration: none;
             font-weight: 800;
             border-radius: 50px;
-            box-shadow: 0 8px 20px rgba(48, 168, 101, 0.6); /* Efek 3D/Glow Kuat */
+            box-shadow: 0 8px 20px rgba(48, 168, 101, 0.6); /* Strong 3D/Glow Effect */
             letter-spacing: 1px;
             transform: translateY(0);
         }
 
         .cta-button:hover {
             background: linear-gradient(90deg, #258C54 0%, var(--color-verdant) 100%);
-            box-shadow: 0 10px 25px rgba(0, 160, 198, 0.7); /* Perubahan Glow saat Hover */
+            box-shadow: 0 10px 25px rgba(0, 160, 198, 0.7); /* Glow Change on Hover */
             transform: translateY(-2px);
         }
 
-        /* Placeholder untuk Ilustrasi Utama */
-        .hero-illustration {
+        /* HERO IMAGE CONTAINER */
+        .illustration-container {
             width: 100%;
             max-width: 1000px;
-            height: 350px;
-            background: url('https://placehold.co/1000x350/C8E6C9/30A865?text=Solarpunk+City+Illustration') center center no-repeat;
-            background-size: cover;
+            margin: 50px auto 0;
             border-radius: 15px;
-            margin-top: 50px;
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15); /* Aksen 3D Kedalaman */
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15); /* 3D Depth Accent */
+            overflow: hidden;
+        }
+
+        .illustration-container img {
+            width: 100%;
+            display: block;
+            height: auto;
+            border-radius: 15px;
         }
         
         /* =======================================================
-           5. SECTION 1: ICEBERG (MAPPING KESADARAN)
+           5. SECTION 1: ICEBERG (CONSCIOUSNESS MAPPING)
            ======================================================= */
         .iceberg-section {
             background-color: var(--color-white-trans);
@@ -196,22 +201,28 @@
             align-items: center;
         }
         
-        .iceberg-visualization {
+        /* ICEBERG IMAGE CONTAINER */
+        .iceberg-illustration-container {
             width: 100%;
             max-width: 600px;
-            height: 400px;
-            background: url('https://placehold.co/600x400/90CAF9/00A0C6?text=Iceberg+Consciousness+Model') center center no-repeat;
-            background-size: cover;
-            border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(0, 160, 198, 0.2);
             margin-top: 40px;
             border: 3px solid var(--color-azure);
-            /* Transform 3D Halus */
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 160, 198, 0.2);
+            /* Subtle 3D Transform */
             transform: perspective(1000px) rotateX(5deg); 
+            overflow: hidden;
+        }
+        
+        .iceberg-illustration-container img {
+            width: 100%;
+            height: auto;
+            display: block;
         }
 
+
         /* =======================================================
-           6. SECTION 2: PILLARS (3 KOLOM KARDU)
+           6. SECTION 2: PILLARS (3 CARD COLUMNS)
            ======================================================= */
         .pillars-section {
             background: var(--color-background);
@@ -231,20 +242,20 @@
             border-radius: 15px;
             text-align: left;
             border: 1px solid rgba(48, 168, 101, 0.2);
-            /* Glazial Effect pada Kartu */
+            /* Glacial Effect on Card */
             backdrop-filter: blur(5px);
             box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
             transform: translateY(0);
         }
 
         .pillar-card:hover {
-            box-shadow: 0 8px 30px rgba(48, 168, 101, 0.3); /* Glow Hijau Saat Hover */
+            box-shadow: 0 8px 30px rgba(48, 168, 101, 0.3); /* Green Glow on Hover */
             transform: translateY(-5px) scale(1.02);
         }
 
         .pillar-icon {
             font-size: 2.5em;
-            color: var(--color-shams); /* Ikon Emas/Shams */
+            color: var(--color-shams); /* Gold/Shams Icon */
             margin-bottom: 15px;
             text-shadow: 0 0 10px rgba(255, 215, 0, 0.7);
         }
@@ -269,11 +280,12 @@
         }
         
         /* =======================================================
-           8. RESPONSIVITAS MOBILE
+           8. MOBILE RESPONSIVENESS
            ======================================================= */
         @media (max-width: 768px) {
             .nav-link {
-                display: none; /* Sederhanakan nav untuk mobile, biasanya diganti dengan menu burger */
+                /* Hide nav for mobile for simplicity */
+                display: none; 
             }
 
             .logo {
@@ -288,13 +300,12 @@
             .hero-tagline {
                 font-size: 1.2em;
             }
-            
-            .hero-illustration, .iceberg-visualization {
-                height: 250px;
-                margin-top: 30px;
+
+            /* Adjust image height for responsiveness */
+            .illustration-container img, .iceberg-illustration-container img {
+                height: auto; 
             }
         }
-
     </style>
 </head>
 <body>
@@ -320,8 +331,14 @@
                 <p class="hero-tagline">Kolektif Teknologi Etis untuk Regenerasi Diri dan Sistem yang Abadi.</p>
                 <a href="#" class="cta-button">Bergabung dengan Kolektif</a>
             </div>
-            <!-- Gambar Ilustrasi Utama Solarpunk Placeholder -->
-            <div class="hero-illustration"></div>
+            
+            <!-- HERO IMAGE: assets/images/Ilustrasi.1.webp -->
+            <div class="illustration-container">
+                <img src="assets/images/Ilustrasi.1.webp" 
+                     alt="Ilustrasi Solarpunk New York City di 2077 dengan pertanian vertikal hijau dan teknologi bersih." 
+                     onerror="this.onerror=null; this.src='https://placehold.co/1000x350/C8E6C9/30A865?text=Solarpunk+City+Illustration'; this.style.borderRadius='15px';">
+            </div>
+
         </div>
     </section>
 
@@ -329,7 +346,14 @@
         <div class="container iceberg-content">
             <h2>Mengangkat Kesadaran: Model Gunung Es RISE COLLECTIVE</h2>
             <p style="max-width: 800px; color: var(--color-protocol);">Potensi sejati Anda terendam di bawah permukaan. Kami memetakan Dimensi Kognitif (protokol batin) Anda menggunakan prinsip Taqwa dan Ihsan untuk mencapai kejernihan (Clarity Azure).</p>
-            <div class="iceberg-visualization"></div>
+            
+            <!-- ICEBERG IMAGE: assets/images/Iceberg.png -->
+            <div class="iceberg-illustration-container">
+                <img src="assets/images/Iceberg.png" 
+                     alt="Visualisasi Konsep Gunung Es Kesadaran dengan sirkuit emas yang menyala di bawah air biru."
+                     onerror="this.onerror=null; this.src='https://placehold.co/600x400/90CAF9/00A0C6?text=Iceberg+Consciousness+Model'; this.style.borderRadius='7px';">
+            </div>
+
         </div>
     </section>
 
@@ -339,7 +363,7 @@
             <p>Sistem kami berlandaskan pada keseimbangan antara diri, teknologi, dan komunitas.</p>
 
             <div class="pillars-grid">
-                <!-- Pilar 1: FOCUS (Regenerasi Diri) -->
+                <!-- Pillar 1: FOCUS (Self-Regeneration) -->
                 <div class="pillar-card">
                     <div class="pillar-icon">🧠</div>
                     <h3>RISE // FOCUS</h3>
@@ -347,7 +371,7 @@
                     <p style="font-size: 0.9em; color: var(--color-azure);">#InnerProtocol #TimeSovereignty</p>
                 </div>
 
-                <!-- Pilar 2: SYSTEM (Ekologis/Etis) -->
+                <!-- Pillar 2: SYSTEM (Ecological/Ethical) -->
                 <div class="pillar-card">
                     <div class="pillar-icon">🌱</div>
                     <h3>RISE // ECO</h3>
@@ -355,7 +379,7 @@
                     <p style="font-size: 0.9em; color: var(--color-azure);">#EthicalTech #DecentralizedFutures</p>
                 </div>
 
-                <!-- Pilar 3: COLLECTIVE (Keseimbangan Sosial) -->
+                <!-- Pillar 3: COLLECTIVE (Social Balance) -->
                 <div class="pillar-card">
                     <div class="pillar-icon">🤝</div>
                     <h3>RISE // LIFE</h3>
