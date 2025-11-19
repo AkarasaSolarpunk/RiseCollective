@@ -297,3 +297,64 @@
                 height: auto; 
             }
         }
+
+/* === 5. PROTOCOL SECTION (ROOT, ALIGN, LIFT) === */
+.protocol-section {
+    padding: 80px 0;
+    text-align: center;
+    background-color: #F8F8F8;
+}
+
+.protocol-grid {
+    display: flex; /* Ini yang membuat 3 kolom sejajar! */
+    gap: 30px;
+    margin-top: 50px;
+    justify-content: center;
+}
+
+.protocol-step {
+    flex: 1;
+    background-color: white;
+    padding: 40px 25px;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    border-top: 5px solid;
+    transition: transform 0.3s, box-shadow 0.3s;
+    max-width: 350px;
+}
+
+.protocol-step:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+/* Warna unik untuk setiap pilar */
+.step-root { border-color: var(--color-verdant); }
+.step-align { border-color: var(--color-shams); }
+.step-lift { border-color: var(--color-azure); }
+
+.protocol-step h3 {
+    font-size: 1.8em;
+    font-weight: 800;
+    margin-top: 0;
+    letter-spacing: 1px;
+}
+
+.step-root h3 { color: var(--color-verdant); }
+.step-align h3 { color: var(--color-shams); }
+.step-lift h3 { color: var(--color-azure); }
+
+.step-label {
+    font-size: 0.9em;
+    text-transform: uppercase;
+    color: var(--color-protocol);
+    opacity: 0.7;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.step-description {
+    font-size: 1.05em;
+    color: var(--color-protocol);
+    opacity: 0.9;
+}
