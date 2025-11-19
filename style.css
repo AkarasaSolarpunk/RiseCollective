@@ -1,0 +1,467 @@
+  <style>
+        /* =======================================================
+           1. SOLARPUNK COLOR PALETTE & IHZAN PROTOCOL
+           ======================================================= */
+        :root {
+            --color-verdant: #30A865;       /* Regenerative Green */
+            --color-azure: #00A0C6;         /* Clarity Blue */
+            --color-shams: #FFD700;         /* Sun/Energy Yellow */
+            --color-protocol: #333333;      /* Structure Gray */
+            --color-background: #F0F8F8;    /* Eco White/Clean Background */
+            --color-white-trans: rgba(255, 255, 255, 0.7);
+        }
+ 
+        /* =======================================================
+           2. GLOBAL STYLES & TYPOGRAPHY
+           ======================================================= */
+        * {
+            box-sizing: border-box;
+            transition: all 0.3s ease-in-out;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--color-background);
+            color: var(--color-protocol);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1300px;
+            margin: 0 auto;
+        }
+
+        h1, h2, h3 {
+            font-weight: 800;
+            line-height: 1.2;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        /* =======================================================
+           3. HEADER & NAVIGATION (GLACIAL/TRANSPARENCY)
+           ======================================================= */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 15px 0;
+            z-index: 1000;
+            background-color: var(--color-white-trans);
+            /* Glacial/Solarpunk Frosted Glass Effect */
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.6em;
+            font-weight: 900;
+            color: var(--color-verdant);
+            letter-spacing: 1px;
+        }
+        
+        .logo span {
+            color: var(--color-azure);
+        }
+
+        .nav-link a {
+            color: var(--color-protocol);
+            text-decoration: none;
+            margin-left: 30px;
+            font-weight: 600;
+            position: relative;
+        }
+
+        .nav-link a:hover {
+            color: var(--color-azure);
+            text-shadow: 0 0 5px rgba(0, 160, 198, 0.5); /* Aura Light Accent */
+        }
+        
+        .nav-link a::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 100%;
+            height: 3px;
+            background-color: var(--color-verdant);
+            transform: scaleX(0);
+            transition: transform 0.3s;
+        }
+
+        .nav-link a:hover::after {
+            transform: scaleX(1);
+        }
+
+
+        /* =======================================================
+           4. HERO SECTION (ENERGY & GRADIENT)
+           ======================================================= */
+        .hero {
+            position: relative;
+            padding-top: 150px;
+            padding-bottom: 100px;
+            text-align: center;
+            /* Soft Solarpunk Gradient */
+            background: linear-gradient(150deg, var(--color-background) 30%, rgba(48, 168, 101, 0.05) 100%);
+            overflow: hidden;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-title {
+            font-size: clamp(2.5em, 5vw, 4.5em); /* Responsive Font Size */
+            font-weight: 900;
+            margin-bottom: 20px;
+            color: var(--color-protocol);
+            text-shadow: 2px 2px 0 var(--color-verdant);
+        }
+
+        .hero-tagline {
+            font-size: clamp(1.1em, 2vw, 1.5em);
+            color: var(--color-azure);
+            font-weight: 400;
+            margin-bottom: 40px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 18px 40px;
+            background: linear-gradient(90deg, var(--color-verdant) 0%, #258C54 100%);
+            color: var(--color-background);
+            text-decoration: none;
+            font-weight: 800;
+            border-radius: 50px;
+            box-shadow: 0 8px 20px rgba(48, 168, 101, 0.6); /* Strong 3D/Glow Effect */
+            letter-spacing: 1px;
+            transform: translateY(0);
+        }
+
+        .cta-button:hover {
+            background: linear-gradient(90deg, #258C54 0%, var(--color-verdant) 100%);
+            box-shadow: 0 10px 25px rgba(0, 160, 198, 0.7); /* Glow Change on Hover */
+            transform: translateY(-2px);
+        }
+
+        /* HERO IMAGE CONTAINER */
+        .illustration-container {
+            width: 100%;
+            max-width: 1000px;
+            margin: 50px auto 0;
+            border-radius: 15px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15); /* 3D Depth Accent */
+            overflow: hidden;
+        }
+
+        .illustration-container img {
+            width: 100%;
+            display: block;
+            height: auto;
+            border-radius: 15px;
+        }
+        
+        /* =======================================================
+           5. SECTION 1: ICEBERG (CONSCIOUSNESS MAPPING)
+           ======================================================= */
+        .iceberg-section {
+            background-color: var(--color-white-trans);
+            border-top: 1px solid var(--color-azure);
+            text-align: center;
+        }
+
+        .iceberg-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        /* ICEBERG IMAGE CONTAINER */
+        .iceberg-illustration-container {
+            width: 100%;
+            max-width: 600px;
+            margin-top: 40px;
+            border: 3px solid var(--color-azure);
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 160, 198, 0.2);
+            /* Subtle 3D Transform */
+            transform: perspective(1000px) rotateX(5deg); 
+            overflow: hidden;
+        }
+        
+        .iceberg-illustration-container img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+
+        /* =======================================================
+           6. SECTION 2: PILLARS (3 CARD COLUMNS)
+           ======================================================= */
+        .pillars-section {
+            background: var(--color-background);
+            text-align: center;
+        }
+
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .pillar-card {
+            background-color: var(--color-white-trans);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: left;
+            border: 1px solid rgba(48, 168, 101, 0.2);
+            /* Glacial Effect on Card */
+            backdrop-filter: blur(5px);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            transform: translateY(0);
+        }
+
+        .pillar-card:hover {
+            box-shadow: 0 8px 30px rgba(48, 168, 101, 0.3); /* Green Glow on Hover */
+            transform: translateY(-5px) scale(1.02);
+        }
+
+        .pillar-icon {
+            font-size: 2.5em;
+            color: var(--color-shams); /* Gold/Shams Icon */
+            margin-bottom: 15px;
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.7);
+        }
+
+        .pillar-card h3 {
+            color: var(--color-protocol);
+            font-size: 1.5em;
+            border-bottom: 2px solid var(--color-verdant);
+            padding-bottom: 5px;
+        }
+
+        /* =======================================================
+           7. FOOTER
+           ======================================================= */
+        footer {
+            background-color: var(--color-protocol);
+            color: rgba(255, 255, 255, 0.8);
+            text-align: center;
+            padding: 30px 0;
+            font-size: 0.9em;
+            border-top: 5px solid var(--color-verdant);
+        }
+        
+        /* =======================================================
+           8. MOBILE RESPONSIVENESS
+           ======================================================= */
+        @media (max-width: 768px) {
+            .nav-link {
+                /* Hide nav for mobile for simplicity */
+                display: none; 
+            }
+
+            .logo {
+                width: 100%;
+                text-align: center;
+            }
+
+            .hero-title {
+                font-size: 2.5em;
+            }
+
+            .hero-tagline {
+                font-size: 1.2em;
+            }
+
+            /* Adjust image height for responsiveness */
+            .illustration-container img, .iceberg-illustration-container img {
+                height: auto; 
+            }
+        }
+    </style>
+
+/* Palet Warna Solarpunk Etis */
+:root {
+    --color-verdant: #30A865; /* Hijau Regeneratif */
+    --color-shams: #FFD700;   /* Kuning Matahari (Aksen Energi) */
+    --color-azure: #00A0C6;   /* Biru Clarity (Kejelasan) */
+    --color-protocol: #333333; /* Abu-abu Protokol (Struktur) */
+    --color-background: #FAFAFA; /* Latar Belakang Bersih */
+}
+
+/* Reset Dasar & Tipografi */
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-background);
+    color: var(--color-protocol);
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* HEADER & Navigasi */
+header {
+    background-color: var(--color-background);
+    padding: 20px 0;
+    border-bottom: 2px solid var(--color-protocol); /* Garis Grid Etis */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 1.8em;
+    font-weight: 800;
+    color: var(--color-verdant);
+    letter-spacing: 2px;
+}
+
+.nav-link a {
+    color: var(--color-protocol);
+    text-decoration: none;
+    margin-left: 25px;
+    font-weight: 600;
+    transition: color 0.3s;
+}
+
+.nav-link a:hover {
+    color: var(--color-azure);
+}
+
+/* HERO SECTION (Fokus Utama) */
+.hero {
+    height: 80vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background: linear-gradient(135deg, var(--color-background) 50%, rgba(48, 168, 101, 0.1) 100%); /* Gradien Solarpunk */
+}
+
+.hero h1 {
+    font-size: 3.5em;
+    font-weight: 800;
+    color: var(--color-protocol);
+    margin-bottom: 0.2em;
+}
+
+.hero p {
+    font-size: 1.5em;
+    color: var(--color-azure);
+    font-weight: 300;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: var(--color-verdant);
+    color: var(--color-background);
+    text-decoration: none;
+    font-weight: 800;
+    border-radius: 5px;
+    margin-top: 20px;
+    box-shadow: 0 4px 10px rgba(48, 168, 101, 0.4); /* Bayangan Hijau */
+    transition: background-color 0.3s;
+}
+
+.cta-button:hover {
+    background-color: var(--color-azure);
+}
+
+/* FOOTER */
+footer {
+    background-color: var(--color-protocol);
+    color: var(--color-background);
+    text-align: center;
+    padding: 30px 0;
+    font-size: 0.9em;
+}
+
+/* === SECTION: RISE PROTOCOL (The Iceberg Metaphor) === */
+.protocol-section {
+    padding: 80px 0;
+    text-align: center;
+    background-color: #F8F8F8; /* Sedikit lebih gelap dari background utama */
+}
+
+.protocol-grid {
+    display: flex;
+    gap: 30px;
+    margin-top: 50px;
+    justify-content: center;
+}
+
+.protocol-step {
+    flex: 1;
+    background-color: white;
+    padding: 40px 25px;
+    border-radius: 8px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    border-top: 5px solid; /* Garis warna sebagai pembeda */
+    transition: transform 0.3s, box-shadow 0.3s;
+    max-width: 350px;
+}
+
+.protocol-step:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.step-root { border-color: var(--color-verdant); } /* Hijau - Fondasi */
+.step-align { border-color: var(--color-shams); } /* Kuning - Proses */
+.step-lift { border-color: var(--color-azure); } /* Biru - Output */
+
+.protocol-step h3 {
+    font-size: 1.8em;
+    font-weight: 800;
+    margin-top: 0;
+    letter-spacing: 1px;
+}
+
+.step-root h3 { color: var(--color-verdant); }
+.step-align h3 { color: var(--color-shams); }
+.step-lift h3 { color: var(--color-azure); }
+
+.step-label {
+    font-size: 0.9em;
+    text-transform: uppercase;
+    color: var(--color-protocol);
+    opacity: 0.7;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.step-description {
+    font-size: 1.05em;
+    color: var(--color-protocol);
+    opacity: 0.9;
+}
