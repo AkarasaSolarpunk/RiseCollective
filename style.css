@@ -337,7 +337,7 @@
     padding: 40px 25px;
     border-radius: 8px;
     box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-    border-top: 5px solid var(--color-verdant-medium); /* UNIFIED ACCENT COLOR */
+    border-top: 5px solid var(--color-verdant); /* UNIFIED ACCENT COLOR */
     transition: transform 0.3s, box-shadow 0.3s;
     max-width: 350px;
     min-width: 280px;
@@ -350,9 +350,9 @@
 }
 
 /* UNIFIED ACCENT COLOR */
-.step-root h3 { color: var(--color-verdant-medium); }
-.step-align h3 { color: var(--color-verdant-medium); }
-.step-lift h3 { color: var(--color-verdant-medium); }
+.step-root h3 { color: var(--color-verdant); }
+.step-align h3 { color: var(--color-verdant); }
+.step-lift h3 { color: var(--color-verdant); }
 
 .step-label {
     font-size: 0.9em;
