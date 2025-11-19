@@ -329,9 +329,9 @@
 }
 
 /* Warna unik untuk setiap pilar */
-.step-root { border-color: var(--color-verdant); }
-.step-align { border-color: var(--color-shams); }
-.step-lift { border-color: var(--color-azure); }
+.step-root { border-color: var(--color-verdant); } 
+.step-align { border-color: var(--color-verdant); }
+.step-lift { border-color: var(--color-verdant); }
 
 .protocol-step h3 {
     font-size: 1.8em;
@@ -341,8 +341,8 @@
 }
 
 .step-root h3 { color: var(--color-verdant); }
-.step-align h3 { color: var(--color-shams); }
-.step-lift h3 { color: var(--color-azure); }
+.step-align h3 { color: var(--color-verdant); }
+.step-lift h3 { color: var(--color-verdant); }
 
 .step-label {
     font-size: 0.9em;
