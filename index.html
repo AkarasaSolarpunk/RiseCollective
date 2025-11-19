@@ -3,19 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RISE COLLECTIVE: Master Your Focus. Build the Future.</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;600;800&display=swap" rel="stylesheet">
+    <title>RISE COLLECTIVE: Regenerasi Diri & Sistem</title>
+    <!-- Font Montserrat untuk Estetika Geometris & Bersih -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;600;800;900&display=swap" rel="stylesheet">
     <style>
-        /* Palet Warna Solarpunk Etis */
+        /* =======================================================
+           1. PALET WARNA SOLARPUNK & PROTOKOL IHZAN
+           ======================================================= */
         :root {
-            --color-verdant: #30A865; /* Hijau Regeneratif */
-            --color-shams: #FFD700;   /* Kuning Matahari (Aksen Energi) */
-            --color-azure: #00A0C6;   /* Biru Clarity (Kejelasan) */
-            --color-protocol: #333333; /* Abu-abu Protokol (Struktur) */
-            --color-background: #FAFAFA; /* Latar Belakang Bersih */
+            --color-verdant: #30A865;       /* Hijau Regeneratif */
+            --color-azure: #00A0C6;         /* Biru Clarity/Kejelasan */
+            --color-shams: #FFD700;         /* Kuning Matahari/Energi */
+            --color-protocol: #333333;      /* Abu-abu Struktur */
+            --color-background: #F0F8F8;    /* Eco White/Latar Belakang Bersih */
+            --color-white-trans: rgba(255, 255, 255, 0.7);
         }
 
-        /* Reset Dasar & Tipografi */
+        /* =======================================================
+           2. GLOBAL STYLES & TIPOGRAFI
+           ======================================================= */
+        * {
+            box-sizing: border-box;
+            transition: all 0.3s ease-in-out;
+        }
+
         body {
             font-family: 'Montserrat', sans-serif;
             margin: 0;
@@ -23,19 +34,38 @@
             background-color: var(--color-background);
             color: var(--color-protocol);
             line-height: 1.6;
+            overflow-x: hidden;
         }
 
         .container {
             width: 90%;
-            max-width: 1200px;
+            max-width: 1300px;
             margin: 0 auto;
         }
 
-        /* HEADER & Navigasi */
+        h1, h2, h3 {
+            font-weight: 800;
+            line-height: 1.2;
+        }
+
+        section {
+            padding: 80px 0;
+        }
+
+        /* =======================================================
+           3. HEADER & NAVIGASI (GLAZIAL/TRANSPARANSI)
+           ======================================================= */
         header {
-            background-color: var(--color-background);
-            padding: 20px 0;
-            border-bottom: 2px solid var(--color-protocol); /* Garis Grid Etis */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 15px 0;
+            z-index: 1000;
+            background-color: var(--color-white-trans);
+            /* Efek Kaca Buram / Glazial Solarpunk */
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
         }
 
         nav {
@@ -45,72 +75,226 @@
         }
 
         .logo {
-            font-size: 1.8em;
-            font-weight: 800;
+            font-size: 1.6em;
+            font-weight: 900;
             color: var(--color-verdant);
-            letter-spacing: 2px;
+            letter-spacing: 1px;
+        }
+        
+        .logo span {
+            color: var(--color-azure);
         }
 
         .nav-link a {
             color: var(--color-protocol);
             text-decoration: none;
-            margin-left: 25px;
+            margin-left: 30px;
             font-weight: 600;
-            transition: color 0.3s;
+            position: relative;
         }
 
         .nav-link a:hover {
             color: var(--color-azure);
+            text-shadow: 0 0 5px rgba(0, 160, 198, 0.5); /* Aksen Cahaya Aura */
+        }
+        
+        .nav-link a::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 100%;
+            height: 3px;
+            background-color: var(--color-verdant);
+            transform: scaleX(0);
+            transition: transform 0.3s;
         }
 
-        /* HERO SECTION (Fokus Utama) */
+        .nav-link a:hover::after {
+            transform: scaleX(1);
+        }
+
+
+        /* =======================================================
+           4. HERO SECTION (ENERGI & GRADIENT)
+           ======================================================= */
         .hero {
-            height: 80vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            position: relative;
+            padding-top: 150px;
+            padding-bottom: 100px;
             text-align: center;
-            background: linear-gradient(135deg, var(--color-background) 50%, rgba(48, 168, 101, 0.1) 100%); /* Gradien Solarpunk */
+            /* Gradien lembut Solarpunk */
+            background: linear-gradient(150deg, var(--color-background) 30%, rgba(48, 168, 101, 0.05) 100%);
+            overflow: hidden;
         }
 
-        .hero h1 {
-            font-size: 3.5em;
-            font-weight: 800;
+        .hero-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero-title {
+            font-size: clamp(2.5em, 5vw, 4.5em); /* Responsive Font Size */
+            font-weight: 900;
+            margin-bottom: 20px;
             color: var(--color-protocol);
-            margin-bottom: 0.2em;
+            text-shadow: 2px 2px 0 var(--color-verdant);
         }
 
-        .hero p {
-            font-size: 1.5em;
+        .hero-tagline {
+            font-size: clamp(1.1em, 2vw, 1.5em);
             color: var(--color-azure);
-            font-weight: 300;
+            font-weight: 400;
+            margin-bottom: 40px;
         }
 
         .cta-button {
             display: inline-block;
-            padding: 15px 30px;
-            background-color: var(--color-verdant);
+            padding: 18px 40px;
+            background: linear-gradient(90deg, var(--color-verdant) 0%, #258C54 100%);
             color: var(--color-background);
             text-decoration: none;
             font-weight: 800;
-            border-radius: 5px;
-            margin-top: 20px;
-            box-shadow: 0 4px 10px rgba(48, 168, 101, 0.4); /* Bayangan Hijau */
-            transition: background-color 0.3s;
+            border-radius: 50px;
+            box-shadow: 0 8px 20px rgba(48, 168, 101, 0.6); /* Efek 3D/Glow Kuat */
+            letter-spacing: 1px;
+            transform: translateY(0);
         }
 
         .cta-button:hover {
-            background-color: var(--color-azure);
+            background: linear-gradient(90deg, #258C54 0%, var(--color-verdant) 100%);
+            box-shadow: 0 10px 25px rgba(0, 160, 198, 0.7); /* Perubahan Glow saat Hover */
+            transform: translateY(-2px);
+        }
+
+        /* Placeholder untuk Ilustrasi Utama */
+        .hero-illustration {
+            width: 100%;
+            max-width: 1000px;
+            height: 350px;
+            background: url('https://placehold.co/1000x350/C8E6C9/30A865?text=Solarpunk+City+Illustration') center center no-repeat;
+            background-size: cover;
+            border-radius: 15px;
+            margin-top: 50px;
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15); /* Aksen 3D Kedalaman */
         }
         
-        /* FOOTER */
+        /* =======================================================
+           5. SECTION 1: ICEBERG (MAPPING KESADARAN)
+           ======================================================= */
+        .iceberg-section {
+            background-color: var(--color-white-trans);
+            border-top: 1px solid var(--color-azure);
+            text-align: center;
+        }
+
+        .iceberg-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .iceberg-visualization {
+            width: 100%;
+            max-width: 600px;
+            height: 400px;
+            background: url('https://placehold.co/600x400/90CAF9/00A0C6?text=Iceberg+Consciousness+Model') center center no-repeat;
+            background-size: cover;
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0, 160, 198, 0.2);
+            margin-top: 40px;
+            border: 3px solid var(--color-azure);
+            /* Transform 3D Halus */
+            transform: perspective(1000px) rotateX(5deg); 
+        }
+
+        /* =======================================================
+           6. SECTION 2: PILLARS (3 KOLOM KARDU)
+           ======================================================= */
+        .pillars-section {
+            background: var(--color-background);
+            text-align: center;
+        }
+
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .pillar-card {
+            background-color: var(--color-white-trans);
+            padding: 30px;
+            border-radius: 15px;
+            text-align: left;
+            border: 1px solid rgba(48, 168, 101, 0.2);
+            /* Glazial Effect pada Kartu */
+            backdrop-filter: blur(5px);
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+            transform: translateY(0);
+        }
+
+        .pillar-card:hover {
+            box-shadow: 0 8px 30px rgba(48, 168, 101, 0.3); /* Glow Hijau Saat Hover */
+            transform: translateY(-5px) scale(1.02);
+        }
+
+        .pillar-icon {
+            font-size: 2.5em;
+            color: var(--color-shams); /* Ikon Emas/Shams */
+            margin-bottom: 15px;
+            text-shadow: 0 0 10px rgba(255, 215, 0, 0.7);
+        }
+
+        .pillar-card h3 {
+            color: var(--color-protocol);
+            font-size: 1.5em;
+            border-bottom: 2px solid var(--color-verdant);
+            padding-bottom: 5px;
+        }
+
+        /* =======================================================
+           7. FOOTER
+           ======================================================= */
         footer {
             background-color: var(--color-protocol);
-            color: var(--color-background);
+            color: rgba(255, 255, 255, 0.8);
             text-align: center;
             padding: 30px 0;
             font-size: 0.9em;
+            border-top: 5px solid var(--color-verdant);
         }
+        
+        /* =======================================================
+           8. RESPONSIVITAS MOBILE
+           ======================================================= */
+        @media (max-width: 768px) {
+            .nav-link {
+                display: none; /* Sederhanakan nav untuk mobile, biasanya diganti dengan menu burger */
+            }
+
+            .logo {
+                width: 100%;
+                text-align: center;
+            }
+
+            .hero-title {
+                font-size: 2.5em;
+            }
+
+            .hero-tagline {
+                font-size: 1.2em;
+            }
+            
+            .hero-illustration, .iceberg-visualization {
+                height: 250px;
+                margin-top: 30px;
+            }
+        }
+
     </style>
 </head>
 <body>
@@ -118,11 +302,12 @@
     <header>
         <div class="container">
             <nav>
-                <div class="logo">RISE COLLECTIVE!</div>
+                <div class="logo">RISE <span>COLLECTIVE!</span></div>
                 <div class="nav-link">
                     <a href="#focus">Fokus</a>
                     <a href="#system">Sistem</a>
                     <a href="#collective">Komunitas</a>
+                    <a href="#join">Bergabung</a>
                 </div>
             </nav>
         </div>
@@ -130,21 +315,59 @@
 
     <section class="hero">
         <div class="container">
-            <h1>Master Your Focus. Build the Future.</h1>
-            <p>Kolektif Teknologi Etis untuk Regenerasi Diri dan Sistem yang Abadi.</p>
-            <a href="#join" class="cta-button">Bergabung dengan Kolektif</a>
+            <div class="hero-content">
+                <h1 class="hero-title">Master Your Focus. Build the Future.</h1>
+                <p class="hero-tagline">Kolektif Teknologi Etis untuk Regenerasi Diri dan Sistem yang Abadi.</p>
+                <a href="#" class="cta-button">Bergabung dengan Kolektif</a>
+            </div>
+            <!-- Gambar Ilustrasi Utama Solarpunk Placeholder -->
+            <div class="hero-illustration"></div>
         </div>
     </section>
 
-    <section id="focus" style="padding: 100px 0; text-align: center;">
+    <section id="focus" class="iceberg-section">
+        <div class="container iceberg-content">
+            <h2>Mengangkat Kesadaran: Model Gunung Es RISE COLLECTIVE</h2>
+            <p style="max-width: 800px; color: var(--color-protocol);">Potensi sejati Anda terendam di bawah permukaan. Kami memetakan Dimensi Kognitif (protokol batin) Anda menggunakan prinsip Taqwa dan Ihsan untuk mencapai kejernihan (Clarity Azure).</p>
+            <div class="iceberg-visualization"></div>
+        </div>
+    </section>
+
+    <section id="system" class="pillars-section">
         <div class="container">
-            <h2>Prinsip Inti: Mengangkat Kesadaran (Iceberg Consciousness)</h2>
-            <p style="color: var(--color-protocol);">Kami memetakan Dimensi Kognitif Anda. Kami membantu Anda mengangkat potensi yang tersembunyi di bawah permukaan.</p>
+            <h2 style="color: var(--color-verdant);">Tiga Pilar Regenerasi (Mizan Protocol)</h2>
+            <p>Sistem kami berlandaskan pada keseimbangan antara diri, teknologi, dan komunitas.</p>
+
+            <div class="pillars-grid">
+                <!-- Pilar 1: FOCUS (Regenerasi Diri) -->
+                <div class="pillar-card">
+                    <div class="pillar-icon">🧠</div>
+                    <h3>RISE // FOCUS</h3>
+                    <p>Mencapai *Focus Mastery* dan Kedaulatan Waktu. Melalui Protokol Kognitif kami, Anda menguasai perhatian Anda untuk melawan Fragmentasi Algoritma.</p>
+                    <p style="font-size: 0.9em; color: var(--color-azure);">#InnerProtocol #TimeSovereignty</p>
+                </div>
+
+                <!-- Pilar 2: SYSTEM (Ekologis/Etis) -->
+                <div class="pillar-card">
+                    <div class="pillar-icon">🌱</div>
+                    <h3>RISE // ECO</h3>
+                    <p>Membangun teknologi dengan Integritas (*Ihsan*). Kami memprioritaskan *Regenerative Design* dan infrastruktur digital yang berkelanjutan secara ekologis.</p>
+                    <p style="font-size: 0.9em; color: var(--color-azure);">#EthicalTech #DecentralizedFutures</p>
+                </div>
+
+                <!-- Pilar 3: COLLECTIVE (Keseimbangan Sosial) -->
+                <div class="pillar-card">
+                    <div class="pillar-icon">🤝</div>
+                    <h3>RISE // LIFE</h3>
+                    <p>Harmoni dalam Komunitas (*Jama'ah*). Menciptakan ruang interaksi yang seimbang (*Mizan*) untuk kesejahteraan kolektif dan pertumbuhan bersama.</p>
+                    <p style="font-size: 0.9em; color: var(--color-azure);">#CollectiveWellness #Ukhuwah</p>
+                </div>
             </div>
+        </div>
     </section>
 
     <footer>
-        <p>&copy; 2025 RISE COLLECTIVE. All Rights Reserved. | Etika sebagai Protokol.</p>
+        <p>RISE COLLECTIVE &copy; 2025. Protokol Integritas Digital (Ihsan). | Visi Solarpunk Jannah.</p>
     </footer>
 
 </body>
